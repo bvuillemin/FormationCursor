@@ -105,11 +105,6 @@ class PetController {
 			result.rejectValue("name", "duplicate", "already exists");
 		}
 
-		LocalDate currentDate = LocalDate.now();
-		if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(currentDate)) {
-			result.rejectValue("birthDate", "typeMismatch.birthDate");
-		}
-
 		owner.addPet(pet);
 		if (result.hasErrors()) {
 			model.put("pet", pet);
