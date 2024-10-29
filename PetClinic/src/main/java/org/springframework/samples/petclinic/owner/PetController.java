@@ -121,7 +121,7 @@ class PetController {
 		return "redirect:/owners/{ownerId}";
 	}
 
-	@GetMapping("/pets/{petId}/edit")
+	@GetMapping("/pets/{petId}/edit") //
 	public String initUpdateForm(Owner owner, @PathVariable("petId") int petId, ModelMap model,
 			RedirectAttributes redirectAttributes) {
 		Pet pet = owner.getPet(petId);
@@ -134,8 +134,8 @@ class PetController {
 			RedirectAttributes redirectAttributes) {
 
 		String petName = pet.getName();
+		int petId = pet.getId();
 
-		// checking if the pet name already exist for the owner
 		if (StringUtils.hasText(petName)) {
 			Pet existingPet = owner.getPet(petName.toLowerCase(), false);
 			if (existingPet != null && existingPet.getId() != pet.getId()) {
@@ -153,9 +153,13 @@ class PetController {
 			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 		}
 
-		owner.addPet(pet);
+		Pet existingPet = owner.getPet(petId);
+		existingPet.setName(pet.getName());
+		existingPet.setBirthDate(pet.getBirthDate());
+		existingPet.setType(pet.getType());
+
 		this.owners.save(owner);
-		redirectAttributes.addFlashAttribute("message", "Pet details has been edited");
+		redirectAttributes.addFlashAttribute("message", "Les détails de l'animal ont été modifiés");
 		return "redirect:/owners/{ownerId}";
 	}
 
