@@ -20,8 +20,6 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
 import org.springframework.stereotype.Component;
 
-
-
 /**
  * <code>Validator</code> for <code>Pet</code> forms.
  * <p>

@@ -95,7 +95,8 @@ public class Owner extends Person {
 	public void addPet(Pet pet) {
 		if (pet.isNew()) {
 			getPets().add(pet);
-		} else {
+		}
+		else {
 			// Replace the old pet instance with the new one
 			Pet existingPet = getPet(pet.getId());
 			if (existingPet != null) {
