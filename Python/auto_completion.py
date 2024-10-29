@@ -1,36 +1,34 @@
-# Script de démonstration pour l'autocomplétion
+# Demonstration script for autocompletion
 
-def calculer_statistiques(liste_valeurs):
+def calculate_statistics(values_list):
     """
-    Calcule les statistiques de base pour une liste de valeurs.
+    Calculates basic statistics for a list of values.
     
-    :param liste_valeurs: Liste de nombres
-    :return: Un dictionnaire contenant la moyenne, la médiane et l'écart-type des valeurs
+    :param values_list: List of numbers
+    :return: A dictionary containing the mean, median, and standard deviation of the values
     """
-    # Calcul de la moyenne
-    moyenne = sum(liste_valeurs) / len(liste_valeurs)
+    # Calculate mean
+    mean = sum(values_list) / len(values_list)
     
-    # Calcul de la médiane
-    liste_triee = sorted(liste_valeurs)
-    n = len(liste_valeurs)
+    # Calculate median
+    sorted_list = sorted(values_list)
+    n = len(values_list)
     if n % 2 == 0:
-        mediane = (liste_triee[n // 2 - 1] + liste_triee[n // 2]) / 2
+        median = (sorted_list[n // 2 - 1] + sorted_list[n // 2]) / 2
     else:
-        mediane = liste_triee[n // 2]
+        median = sorted_list[n // 2]
 
-    # Calcul de l'écart-type (à compléter)
-    somme_carre_diff = # Complétez ici
-    ecart_type =  # Complétez ici
-
+    # Calculate standard deviation (to be completed)
+    sum_squared_diff = # To be completed
+    standard_deviation = # To be completed
     
     return {
-        "moyenne": moyenne,
-        "mediane": mediane,
-        "ecart_type": ecart_type
+        "mean": mean,
+        "median": median,
+        "standard_deviation": standard_deviation
     }
 
-# Exemple d'utilisation
-valeurs = [12, 15, 23, 26, 29, 35, 40]
-statistiques = calculer_statistiques(valeurs)
-print("Statistiques :", statistiques)
-
+# Usage example
+values = [12, 15, 23, 26, 29, 35, 40]
+statistics = calculate_statistics(values)
+print("Statistics:", statistics)
