@@ -7,7 +7,7 @@
 - **Define the Output Structure**: Specify how you want the results presented (e.g., step-by-step explanations, code comments, test case details).
 - **Emphasize Clarity and Usefulness**: Especially in documentation or explanations, ask for clear, concise language suited for developers or end-users.
 
-## Python Demo Prompts
+## Python Demo Prompts (in the Python folder)
 
 1. **TAB**
    - Complete the "to be completed" sections (click just before this text and press the “tab” button)
@@ -15,7 +15,7 @@
    - Auto-complete in text and in return statements
 
 2. **CTRL K**
-   - Follow the notebook instructions
+   - Follow the notebook instructions (DataScientist/DemoDS.ipynb)
 
 3. **CTRL L**
    - **Basic Prompt (with errors)**: Create a Python script that sets up a database to store car details, populates it with sample data, and displays it on the terminal.
@@ -29,7 +29,7 @@
 
    - **Prompt 2**: Great. Now edit the code in place to add a simple GUI using Tkinter that shows the car details.
 
-## Java Demo Prompts
+## Java Demo Prompts (in the PetClinic folder)
 
 1. **Launch the Java Project and Build Before the Demo**
    - Key Scripts:
